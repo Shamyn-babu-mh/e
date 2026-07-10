@@ -1,0 +1,689 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+
+* {margin:0;
+font-family:lekton;
+}
+
+:root {
+  --primary-color: #f3f6fc;
+  --secondary-color: blue;
+  
+}
+
+#keyboardControls {
+  position:fixed;
+  z-index:3;
+  bottom:4vh;
+  left: 2vh;
+}
+
+
+
+#myContainer1 {visibility: hidden;
+  position:fixed;
+  z-index:1;
+  width:100vw;
+  height:60vh;
+  display:flex;
+  gap:10px;
+  right:0;
+  
+}
+
+#myContainer { visibility: hidden;
+  position:fixed;
+  z-index:1;
+ display: grid;
+  grid-template-columns:1;
+  width:100vw;
+ 
+ 
+}
+
+#myContainer div {
+  
+  border: 1px solid black;
+  padding: 5px;
+  border:.1px solid black;
+}
+
+
+#instructions {
+  position:fixed;
+  top:56vh;
+  z-index:22;
+    background:#f3f6fc;
+  width:40vw;
+  left:40vw;
+  border-radius:3px;
+  padding:4px;
+}
+#donate-button {
+  position:fixed;
+  right:0;
+  z-index:10;
+}
+
+#grid {
+  position:fixed;
+  top:196px;
+  right:0;
+  z-index:10;
+}
+
+#color {position:fixed;
+  top:250px;
+  right:0;
+  z-index:10;
+}
+
+#line {display:none;
+border: 1px solid black;}
+
+#car1 {display:none;
+  background:white;
+  z-index:10;
+  border-radius:12px;
+  
+  position: absolute; /* Changed from relative to absolute for precise coordinate physics tracking */
+  left:400px;
+  width: 44px;
+  height:72px;
+  top:130px;
+border:1px solid black;
+}
+
+#car2 {display:none;
+  background:white;
+  z-index:10;
+  border-radius:12px;
+  border-top:13px solid red;
+  position: absolute; /* Changed from relative to absolute for precise coordinate physics tracking */
+  left:400px;
+  width: 44px;
+  height:72px;
+  top:320px;
+border:1px solid black;
+}
+
+#heading {color:black;
+  position: fixed;
+  z-index:11;
+  top:40vh;
+  right:20vw;
+  display:none;
+  }
+
+
+
+#close {position:fixed;
+z-index:204;
+right:0;
+display:none;}
+
+
+#contactScreen {padding:3vw;
+  display:none;
+width:100vw;
+height:100vh;
+background:white;
+}
+
+#contact {
+text-decoration:none;
+  position:fixed;
+  top:55px;
+  right:0;
+  z-index:202;
+  
+}
+
+#menu {position:fixed;
+  right:0;
+  top:123px;
+z-index:14;}
+
+#sceneH {position:fixed;
+  right:0;
+  top:89px;
+  z-index:14;
+  }
+
+
+
+
+#donation-timer {display:none;
+  padding-left:4vw;
+z-index:201;
+  position:fixed;
+  background:#f3f6fc;
+  width:100vw;
+  height:100vh;
+  
+  
+}
+
+.tired {font-weight:bold;
+font-size: 22px;}
+
+#contactScreen {color:black;
+  display:hidden;
+position:fixed;
+  width:100vw;
+  height:100vh;
+  z-index:203;
+  
+  
+}
+
+#closeButton {position:fixed;
+  right:0;
+  z-index:204;
+  color:black;
+  border:2px solid blue;
+  cursor: pointer;
+  }
+
+
+#haveDonated {display:none;
+  text-align: center;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  background:white;
+  z-index:202;
+  }
+
+
+
+
+.donation-button {font-size:16px;
+background:blue;
+color:white;
+padding:5vw;
+border-radius:10vw;
+border:2vw solid white;
+  cursor: pointer;
+  
+}
+
+.donation-button:hover {
+  background:#103826;
+  
+}
+.QRcode {height:40vh;
+}
+
+.haveDonated {color:white;
+  font-size:16px;
+}
+
+body {background:var(--primary-color);}
+
+
+
+h4 {color:blue;}
+
+
+
+#poster {width:100vw;
+  height:100vh;
+background:var(--primary-color);
+}
+
+
+
+#poster-h{
+  position:fixed;
+  width:50vh;
+right:20vh;
+top:25vh;
+
+fill:color-mix(in srgb, var(--secondary-color) 20%, transparent);}
+
+#donate {positin:fixed;
+ 
+padding:1vh;
+
+  background:var(--primary-color);
+  
+  z-index:15;
+  font-size:16px;
+}
+
+#ground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  right:0;
+  background:var(--primary-color);
+  overflow: hidden;
+}
+
+
+#top-space {height:31vw;
+background:var(--primary-color);}
+
+#h {
+  position: fixed;
+  width:40vw:
+    
+  
+  margin-top: 9vh; /* Retains your exact custom vertical offset spacing */
+       /* Background layer priority */
+
+}
+  
+
+
+#steering {opacity:.7;
+  position: absolute;
+  bottom: 50vh;
+  left: 5vw;
+  width: 40vh;
+  height: 40vh;
+  background: black;
+  border-radius: 50vw;
+  z-index:2;
+  
+  /* CRITICAL FOR MOBILE INTERACTIVE STEERING: */
+  touch-action: none; 
+  user-select: none;  /* Prevents mobile phones from bringing up text selection highlights */
+}
+
+
+
+
+
+#car {text-align:center;
+  position: absolute; /* Changed from relative to absolute for precise coordinate physics tracking */
+  
+  width: 44px;
+  height:59px;
+  z-index: 20; 
+  /* Explicitly stacks the car ABOVE the SVG road layer */
+  
+ 
+}
+
+#carBody {border-radius: 12px;
+  z-index:3;
+  
+  background: white;
+  position: absolute;
+ border:1px solid black;
+  border-top:13px solid color-mix(in srgb, var(--secondary-color) 70%, transparent);
+ width: 44px;
+  height:59px;
+  
+  
+}
+
+[id^="frontTyre"], [id^="rearTyre"] {
+  z-index: 10;        /* Locks tyres tightly over the vehicle frame chassis */
+}
+
+
+
+#frontTyre1 {background: black;
+  position:absolute;
+  top:10px;
+width:6px;
+  height:19px;
+  border-radius: 12px;
+}
+
+
+#frontTyre2 {background: black;
+  border-radius: 12px;
+  position:absolute;
+  right:-2px;
+   top:10px;
+width:6px;
+  height:19px;}
+
+#rearTyre1 {background: black;
+  position:absolute;
+  left:0vh;
+  top:45px;
+  border-radius: 12px;
+width:6px;
+  height:19px;}
+
+#rearTyre2 {background: black;
+  position:absolute;
+  right:-2px;
+  border-radius: 12px;
+top:45px;
+width:6px;
+  height:19px;}
+
+/* Layout Overlays */
+#driveControls {
+  position: fixed;
+  bottom: 10vh;
+  left: 45vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  
+}
+
+.drive-btn {z-index:4;
+  width: 25vw;
+  max-width: 140px;
+  height: 16vw;
+  max-height: 65px;
+   background-color: var(--primary-color);
+ border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
+ 
+  font-weight: bold;
+  
+  border-radius: 8px;
+  user-select: none;
+  touch-action: none;
+}
+.drive-btn:active {
+  background-color: color-mix(in srgb, var(--secondary-color) 70%, transparent);
+  color: black;
+  z-index:3;
+}
+
+#gearBox {
+  position: fixed;
+ bottom:0;
+  right: 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+  
+  
+  z-index: 200;
+}
+
+.gear-label {
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  
+  padding:10px;
+  background: color-mix(in srgb, var(--secondary-color) 30%, transparent);
+}
+
+.gear-btn {
+ height:50px;
+  width:50px;
+  
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
+  background: var(--primary-color);
+  color: black;
+  font-weight: bold;
+  
+  cursor: pointer;
+}
+
+.gear-btn.active {
+background:color-mix(in srgb, var(--secondary-color) 30%, transparent);
+  border-color: black;
+  
+}
+
+
+
+.drive-btn {z-index:4;
+  
+  max-width: 140px;
+  height: 16vw;
+   background-color: var(--primary-color);
+ border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
+ 
+  font-weight: bold;
+  
+  border-radius: 8px;
+  user-select: none;
+  touch-action: none;
+  
+  width: 28vw;
+  max-width: 140px;
+  
+  max-height: 60px;
+
+  font-size: 16px;
+  
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+/* Active State Colors for Toggles */
+.drive-btn.active-forward {
+  background: #28a745; /* Green for rolling forward */
+  border-color: #28a745;
+  color: white;
+}
+
+.drive-btn.active-reverse {
+  background: color-mix(in srgb, var(--secondary-color) 30%, transparent);
+  border-color: #dc3545;
+ 
+}
+
+.stop-btn {
+  border-color: color-mix(in srgb, var(--secondary-color) 30%, transparent);
+  background: var(--primary-color);
+}
+
+.stop-btn:active {
+  background: color-mix(in srgb, var(--secondary-color) 30%, transparent);
+}
+
+
+#flashOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Violent, chaotic lightning strobe effect */
+#flashOverlay.active-flash {
+  opacity: 1;
+  background-image: radial-gradient(circle, #ffffff 40%, #e6f7ff 70%, #ffbb00 100%);
+  animation: brutalLightning 0.12s infinite linear;
+  box-shadow: inset 0 0 100px rgba(255, 255, 255, 1);
+}
+
+/* Sharp, sudden opacity spikes to simulate an electrical short-circuit */
+@keyframes brutalLightning {
+  0%   { opacity: 1;     filter: brightness(1);   }
+  20%  { opacity: 0.45;  filter: brightness(1.5); }
+  35%  { opacity: 0.95;  filter: brightness(2);   }
+  50%  { opacity: 0.3;   filter: brightness(1);   }
+  68%  { opacity: 1;     filter: brightness(2.5); }
+  85%  { opacity: 0.55;  filter: brightness(1.2); }
+  100% { opacity: 1;     filter: brightness(2);   }
+}
+
+/* Violent screen-shake on the game container to amplify the crash impact */
+#ground.shake-arena {
+  animation: structuralQuake 0.08s infinite matrix;
+}
+
+@keyframes structuralQuake {
+  0%   { transform: translate(3px, 2px)   rotate(0.5deg); }
+  25%  { transform: translate(-2px, -3px) rotate(-1deg);  }
+  50%  { transform: translate(-4px, 1px)  rotate(1deg);   }
+  75%  { transform: translate(2px, -1px)  rotate(-0.5deg);}
+  100% { transform: translate(-1px, 3px)  rotate(0deg);   }
+}
+
+
+
+@media only screen and (max-width: 490px) {
+  
+#steering {
+  
+  bottom: 15vh;
+  left: 5vw;
+  width: 40vw;
+  height:40vw;
+}
+  
+  #donate {
+  font-size:16px;
+}
+  
+  #ground {
+  position: fixed;
+  width: 100vw;
+  right:0;
+}
+  
+  #poster-h{
+  position:fixed;
+  width:80vw;
+left:10vw;
+top:23vw;}
+  
+  #car {
+  position: absolute; /* Changed from relative to absolute for precise coordinate physics tracking */
+  width: 10vw;
+  height: 16vw;
+  z-index: 20; 
+  /* Explicitly stacks the car ABOVE the SVG road layer */
+  
+  
+}
+  
+  
+  
+  
+
+#carBody {border-radius: 6px;
+  border-top:2vw solid color-mix(in srgb, var(--secondary-color) 70%, transparent);
+  
+  position: absolute;
+ 
+       width: 10vw;
+  height: 16vw;
+}
+
+[id^="frontTyre"], [id^="rearTyre"] {
+  z-index: 10;        /* Locks tyres tightly over the vehicle frame chassis */
+}
+
+
+
+#frontTyre1 {
+ 
+  top:2vw;
+width:1.4vw;
+  border-radius: 12px;
+height:4vw;}
+
+
+#frontTyre2 {
+  border-radius: 12px;
+  
+  right:-2px;
+   top:2vw;
+width:1.4vw;
+height:4vw;}
+
+#rearTyre1 {
+  left:0vh;
+  top:13vw;
+  border-radius: 12px;
+width:1.4vw;
+height:4vw;}
+
+#rearTyre2 {
+  right:-2px;
+  border-radius: 12px;
+  top:13vw;
+width:1.4vw;
+height:4vw;}
+  
+    #car1 {border-radius: 6px;
+  border-top:2vw solid color-mix(in srgb, var(--secondary-color) 70%, transparent);
+  background:white;
+  position: absolute;
+  z-index: 11;
+  
+       width: 10vw;
+  height: 16vw;
+      left:30vw;
+      top:10vh;
+}
+  
+   #car2 {border-radius: 6px;
+  border-top:2vw solid color-mix(in srgb, var(--secondary-color) 70%, transparent);
+  background:white;
+  position: absolute;
+  z-index: 11;
+  
+       width: 10vw;
+  height: 16vw;
+      left:30vw;
+     top:60vw;
+}
+  
+  
+  #driveControls {
+  
+  bottom: 10vh;
+    left:50vw;
+}
+  
+
+  #gearBox {
+  width:250px;
+  bottom: 0;
+  left: 1vw;
+  
+  flex-direction: row;
+  align-items: center;
+  
+  background: var(--primary-color);
+ 
+  
+  
+}
+
+  #line {
+  width:2vw;
+  height:60vw;
+  background:white;
+  position:fixed;
+  z-index:12;
+  top:15vh;
+  left:43vw;
+  
+}
+  
+  #instructions {
+  
+  top:40vh;
+  
+}
+  
+  #keyboardControls {display:none;}
+
+  
+}
+
+
+
+
+
+
+
