@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+
+<title>car driving learning game</title>
+<meta charset="utf-8">
+<meta name="description" content="This game is helpful for those who are trying to learn how a car moves">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+    <body>
+
+<p id="keyboardControls">Keyboard controls:<br><br>W → moves the car forward<br>S → moves the car in reverse<br>A → stops the car<br>Z, X, C and V → selects the speed<br><br>To steer the steering wheel, <br>simply hover your mouse over it</p>
+
+<div id="myContainer"> </div>
+<div id="myContainer1"></div>
+
+<p id="instructions">to move the car forward, click on the steering wheel</p>
+     
+      
+        <div id="car1"></div>
+        <div id="car2"></div>
+      <div id="line"></div>
+ 
+    
+<button id="color" onclick="changeColor()">change<br>color</button>
+      
+      <button id="grid" onclick="showGrid()">show<br>grid</button>
+      
+       <button id="donate-button" onclick="showDonate()">donate</button>
+      
+  
+      <button id="contact" onclick="showContact()">contact</button>
+
+<h1 id="heading">Reverse<br>parking<br>game</h1>
+
+      
+      <button id="close" onclick="hideContact()">close [ x ]</button>
+
+     
+      <button id="sceneH" onclick="sceneH()">scene H</button>
+      
+      
+
+      <button id="menu" onclick="scene1()">scene <br>reverse<br>parking</button>
+
+
+
+
+      
+      <p id="contactScreen"><br><br><br><br><br><br>Phone: +91 9567 368 189<br><br>
+        Whatsapp: +91 9567 368 189<br><br>
+        E-mail: shamyn.babu.mh@gmail.com
+        <br><br>Telegram: @shamynb
+      </p>
+     
+  
+      
+      
+      
+<p id="donation-timer"><span class="tired"><br>Please donate 50 Indian Rupees.</span><br><br><br>My UPI number: 9567 368 189<br><br>or<br><br>My bank
+account number: 40731290508<br>Bank Name: State Bank of India<br>IFSC code - SBIN0070517<br>
+Account holder's name: Shamyn Babu M H<br><br> 
+      
+      <br><br><br><br><br><br>
+        <button class="donation-button" onclick="showAlert()">click here if you have donated</button>
+        
+      </p>
+      
+      <p id="haveDonated"><br><br>
+      <label for="userInput">Type the acknowledgement code that I have/might send you. This can take upto 2 days.</label><br><br>
+        <input type="text" id="userInput" placeholder="Type here..."><br><br>
+        <button class="donation-button" onclick="disappeer()">Submit</button>
+      </p>
+ 
+      
+<div id="ground">
+  
+  <div id="top-space"><p id="donate">&nbsp;Kindly donate 50 Indian Rupees to<br>
+ &nbsp;my upi number: &nbsp;9567 368 189
+</p></div>
+  <div id="poster">
+  <svg
+   width="89.999672mm"
+   height="90.000191mm"
+   viewBox="0 0 89.999672 90.000191"
+   version="1.1"
+   id="poster-h"
+   sodipodi:docname="h.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2"
+     inkscape:cx="170.25"
+     inkscape:cy="184.75"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient2"
+       inkscape:swatch="gradient">
+      <stop
+         style="stop-color:#947a58;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#947a58;stop-opacity:0;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-14.171229,-13.580567)">
+    <path
+       id="rect1"
+       style="stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       d="M 14.171228,13.580566 V 103.58076 H 44.185417 V 73.81875 h 30.000236 v 29.76201 H 104.1709 V 13.580566 H 74.411479 v 29.93254 h -29.99972 v -29.93254 z" />
+  </g>
+
+</svg>
+
+</div>
+
+  
+  
+
+
+
+
+
+<!-- Mobile / Touch Controls Overlay -->
+<!-- One-Touch Driving Controls Overlay -->
+<div id="driveControls">
+  
+  <button id="btnStop" class="drive-btn stop-btn">🛑 STOP</button>
+  <button id="btnReverse" class="drive-btn">▼ REVERSE</button>
+</div>
+
+
+<!-- Gear Selection Dashboard -->
+<div id="gearBox">
+  <span class="gear-label">speed</span>
+  <button class="gear-btn active" data-speed=".1">1</button>
+  <button class="gear-btn" data-speed=".2">2</button>
+  <button class="gear-btn" data-speed=".3">3</button>
+  <button class="gear-btn" data-speed=".4">4</button>
+  <button class="gear-btn" data-speed=".8">8</button>
+  
+  
+</div>
+
+
+  
+  <div id="car">
+  <div id="carBody"><h4><br>CAR</h4></div>
+    
+   <!-- Rear Tyres (Fixed Straight) -->
+  <div id="rearTyre1"></div>
+  <div id="rearTyre2"></div>
+   <div id="frontTyre1"></div>
+  <div id="frontTyre2"></div>
+</div>
+
+  
+  </div>
+
+
+  <!-- Interactive Steering Wheel Group - Center point: (100, 40) -->
+ 
+
+
+
+<button id="btnForward" class="drive-btn" onclick="instructionsDis()">
+  <img id="steering" src="https://i.ibb.co/qL8ZqBLz/lucid-origin-make-a-black-colored-steering-wheel-the-background-should-be-transparent-it-sh-0.jpg" draggable="false">
+ </button>
+  
+
+
+<!-- Fullscreen flash warning layer -->
+<div id="flashOverlay"></div>
+      
+      
+  
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+ 
