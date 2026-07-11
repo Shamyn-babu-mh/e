@@ -534,7 +534,7 @@ background:color-mix(in srgb, var(--secondary-color) 30%, transparent);
   
 #steering {
   
-  bottom: 15vh;
+  bottom: 10vh;
   left: 5vw;
   width: 40vw;
   height:40vw;
