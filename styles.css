@@ -586,7 +586,7 @@ top:23vw;}
 
 
 #frontTyre1 {
- 
+ border:1px solid white;
   top:2vw;
 width:1.4vw;
   border-radius: 12px;
@@ -595,7 +595,7 @@ height:4vw;}
 
 #frontTyre2 {
   border-radius: 12px;
-  
+  border:1px solid white;
   right:-2px;
    top:2vw;
 width:1.4vw;
