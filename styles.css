@@ -20,7 +20,17 @@ font-family:lekton;
   left: 2vh;
 }
 
-
+#privacyPolicy {
+  
+  display:none;
+  padding-top:20vh;
+  position:fixed;
+  z-index:30;
+  background:var(--primary-color);
+  height:100vh;
+  width:100vw;
+  
+  }
 
 #myContainer1 {visibility: hidden;
   position:fixed;
@@ -45,9 +55,9 @@ font-family:lekton;
 
 #myContainer div {
   
-  border: 1px solid black;
+  
   padding: 5px;
-  border:.1px solid black;
+  border:.05px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
 }
 
 
@@ -64,7 +74,7 @@ font-family:lekton;
 #donate-button {
   position:fixed;
   right:0;
-  z-index:10;
+  z-index:30;
 }
 
 #grid {
@@ -242,7 +252,7 @@ background:var(--primary-color);
   position:fixed;
   width:50vh;
 right:20vh;
-top:25vh;
+top:10vh;
 
 fill:color-mix(in srgb, var(--secondary-color) 20%, transparent);}
 
@@ -332,6 +342,8 @@ background:var(--primary-color);}
 
 #frontTyre1 {background: black;
   position:absolute;
+  border:1px solid white;
+  
   top:10px;
 width:6px;
   height:19px;
@@ -341,6 +353,7 @@ width:6px;
 
 #frontTyre2 {background: black;
   border-radius: 12px;
+  border:1px solid white;
   position:absolute;
   right:-2px;
    top:10px;
@@ -348,6 +361,7 @@ width:6px;
   height:19px;}
 
 #rearTyre1 {background: black;
+  border:1px solid white;
   position:absolute;
   left:0vh;
   top:45px;
@@ -356,6 +370,7 @@ width:6px;
   height:19px;}
 
 #rearTyre2 {background: black;
+  border:1px solid white;
   position:absolute;
   right:-2px;
   border-radius: 12px;
@@ -586,7 +601,7 @@ top:23vw;}
 
 
 #frontTyre1 {
- border:1px solid white;
+ 
   top:2vw;
 width:1.4vw;
   border-radius: 12px;
@@ -595,7 +610,7 @@ height:4vw;}
 
 #frontTyre2 {
   border-radius: 12px;
-  border:1px solid white;
+  
   right:-2px;
    top:2vw;
 width:1.4vw;
