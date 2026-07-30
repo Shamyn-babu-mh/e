@@ -1,14 +1,100 @@
+let toggle = 0;
+
+function showClose() {
+  
+  if ( toggle == 0)
+    {
+  document.getElementById('donate-button').innerHTML = "close [ x ]";
+  toggle = 1;
+  document.getElementById('privacyPolicy').style.display = "block";
+}
+  
+  else {
+      document.getElementById('donate-button').innerHTML = "privacy <br>policy";
+  toggle = 0;
+  document.getElementById('privacyPolicy').style.display = "none";
+      }
+   
+    }
+     
+
+
+let endDate;
+let formattedEndDate;
+let deviceId = localStorage.getItem('fc4f66c9-49ac-46e2-98c1-7c14fadcaeaa');
+let systemEndDate = localStorage.getItem('endDate');
+let startDate = new Date();
+
+// .split('T')[0] extracts exactly the "YYYY-MM-DD" string
+let formattedStartDate = startDate.toISOString().split('T')[0];
+if (!deviceId) {
+  
+if (!systemEndDate) {
+  endDate = new Date();
+  
+  // Add 0 days (Change to + 4 for a 4-day wait/trial)
+  endDate.setDate(endDate.getDate() + 6);
+
+  formattedEndDate = endDate.toISOString().split('T')[0];
+
+  localStorage.setItem('endDate', formattedEndDate);
+  systemEndDate = formattedEndDate;
+ 
+}
+  
+  // Compares string "YYYY-MM-DD" to "YYYY-MM-DD"
+if (formattedStartDate >= systemEndDate) {
+  document.getElementById('donation-timer').style.display = "block";
+}
+}
+
+function showAlert() {
+    document.getElementById('donation-timer').style.display = "none";
+   // If no device ID exists, generate a new one and save it
+
+    endDate = new Date();
+  
+  // Add 0 days (Change to + 4 for a 4-day wait/trial)
+  endDate.setDate(endDate.getDate() + 34);
+
+  formattedEndDate = endDate.toISOString().split('T')[0];
+
+  localStorage.setItem('endDate', formattedEndDate);
+  
+
+
+}
+
+
+
+
+
+
+
+
 function changeColor() {
-  const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color').trim();
-if (secondaryColor === "blue") {
+  // 1. Define your color sequence in order
+  const colors = ["blue", "crimson"];
+  
+  // 2. Get the current active color from CSS variables
+  const currentColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--secondary-color')
+    .trim(); 
 
-   document.documentElement.style.setProperty('--secondary-color', 'crimson');
-}
-  if (secondaryColor === "crimson") {
+  // 3. Find the index of the current color in your array
+  const currentIndex = colors.indexOf(currentColor);
 
-   document.documentElement.style.setProperty('--secondary-color', 'blue');
+  // 4. Calculate the next index (loops back to 0 at the end)
+  const nextIndex = (currentIndex + 1) % colors.length;
+
+  // 5. Apply the new color
+  document.documentElement.style.setProperty('--secondary-color', colors[nextIndex]);
+  
+  
+  
+
 }
-}
+
 
 
 function showGrid() {
@@ -53,7 +139,7 @@ const currentContainer = document.getElementById("myContainer1");
 currentContainer.appendChild(newDiv);
   
    document.getElementById(id).style.width = "1px";
-  document.getElementById(id).style.background = "black";
+  document.getElementById(id).style.background = "color-mix(in srgb, var(--secondary-color) 30%, transparent)";
 document.getElementById(id).style.height = "70vh";
 
 }
@@ -95,35 +181,14 @@ function instructionsDis() {
 
 
 
-function showDonate() {
-     document.getElementById('donation-timer').style.display = "block";
-}
 
 
 
 
-let deviceId = localStorage.getItem('fc4f66c9-49ac-46e2-98c1-7c14fadcaeaa');
-if (!deviceId) {
 
-setTimeout(() => {
-    
-  document.getElementById('donation-timer').style.display = "block";
-  
 
-    // Insert your code here (e.g., sound an alarm, submit a form)
-}, 300000);
-  
-}
 
-function showAlert() {
-    document.getElementById('donation-timer').style.display = "none";
-   // If no device ID exists, generate a new one and save it
-if (!deviceId) {
-    deviceId = crypto.randomUUID(); // Generates a secure, unique string
-    localStorage.setItem('fc4f66c9-49ac-46e2-98c1-7c14fadcaeaa', deviceId);
-}
 
-}
 
 function scene1 () {
   document.getElementById('car1').style.display = "block";
