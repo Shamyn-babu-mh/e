@@ -62,6 +62,12 @@
 </head>
     <body>
 
+
+      
+       <div id="privacyPolicy"><p>Last updated: <time datetime="2026-07-28">July 28, 2026</time></p>
+         <br>
+         This website uses user's browser's internal memory to store the "date" in which the user might be billed. This privacy policy is written on 28-7-2026. For users who have visited this site before this date, there is a chance that this website has stored a unique string (like "fc4f66c9-49ac-46e2-98c1-7c14fadcaeaa") in the browsers internal memory. This unique string, increased the probability of a better gaming experince for the user.</div>
+
 <p id="keyboardControls">Keyboard controls:<br><br>W → moves the car forward<br>S → moves the car in reverse<br>A → stops the car<br>Z, X, C and V → selects the speed<br><br>To steer the steering wheel, <br>simply hover your mouse over it</p>
 
 <div id="myContainer"> </div>
@@ -79,7 +85,8 @@
       
       <button id="grid" onclick="showGrid()">show<br>grid</button>
       
-       <button id="donate-button" onclick="showDonate()">give <br>money</button>
+       <button id="donate-button" onclick="showClose()">privacy <br>policy</button>
+      
       
   
       <button id="contact" onclick="showContact()">contact</button>
@@ -110,14 +117,16 @@
       
       
       
-<p id="donation-timer"><span class="tired"><br>Please give me 50 Indian Rupees or 1 dollar.</span><br><br><br>My UPI number: 9567 368 189<br><br>or<br><br>My bank
+<p id="donation-timer"><span class="tired"><br>Your bill so far is 50 Indian Rupees (less than a Dollar) (Don't worry. I will not harm you if you don't pay 😊. But, it would mean the world to me, if you pay).</span><br><br><br>My UPI number: 9567 368 189<br><br>or<br><br>My bank
 account number: 40731290508<br>Bank Name: State Bank of India<br>IFSC code - SBIN0070517<br>
 Account holder's name: Shamyn Babu M H<br><br> 
       
       <br><br><br><br><br><br>
-        <button class="donation-button" onclick="showAlert()">click here if you have given me 50 Indian Rupees or 1 dollar</button>
+        <button class="donation-button" onclick="showAlert()">click here if you have paid</button>
         
       </p>
+      
+     
       
       <p id="haveDonated"><br><br>
       <label for="userInput">Type the acknowledgement code that I have/might send you. This can take upto 2 days.</label><br><br>
@@ -128,9 +137,7 @@ Account holder's name: Shamyn Babu M H<br><br>
       
 <div id="ground">
   
-  <div id="top-space"><p id="donate">&nbsp;Kindly give me 50 Indian<br>&nbsp;Rupees or 1 dollar<br>
- &nbsp;my upi number: &nbsp;9567 368 189
-</p></div>
+  <div id="top-space"></div>
   <div id="poster">
   <svg
    width="89.999672mm"
@@ -241,7 +248,7 @@ Account holder's name: Shamyn Babu M H<br><br>
 
 
 <button id="btnForward" class="drive-btn" onclick="instructionsDis()">
-  <img id="steering" src="steering-wheel-cc0-license.jpg" draggable="false">
+  <img id="steering" src="https://raw.githubusercontent.com/Shamyn-babu-mh/e/refs/heads/main/steering-wheel-cc0-license.jpg" draggable="false">
  </button>
   
 
@@ -249,7 +256,7 @@ Account holder's name: Shamyn Babu M H<br><br>
 <!-- Fullscreen flash warning layer -->
 <div id="flashOverlay"></div>
       
-      
+            
   
 <script src="script.js"></script>
 
