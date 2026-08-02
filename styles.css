@@ -167,6 +167,7 @@ z-index:14;}
 
 #donation-timer {display:none;
   padding-left:4vw;
+ padding-right: 30vw;                
 z-index:201;
   position:fixed;
   background:#f3f6fc;
@@ -177,7 +178,7 @@ z-index:201;
 }
 
 .tired {font-weight:bold;
-        padding-right:10vw;
+
 font-size: 22px;}
 
 #contactScreen {color:black;
