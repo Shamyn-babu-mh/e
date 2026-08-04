@@ -71,10 +71,9 @@ function showAlert() {
 
 
 
-
 function changeColor() {
   // 1. Define your color sequence in order
-  const colors = ["blue", "crimson"];
+  const colors = ["blue", "#f3f6fc", "crimson", "#f3f6fc", "#6D28D9", "#D7FF00", "#C2185B", "#e0f2fe"];
   
   // 2. Get the current active color from CSS variables
   const currentColor = getComputedStyle(document.documentElement)
@@ -85,11 +84,16 @@ function changeColor() {
   const currentIndex = colors.indexOf(currentColor);
 
   // 4. Calculate the next index (loops back to 0 at the end)
-  const nextIndex = (currentIndex + 1) % colors.length;
+  const nextIndex = (currentIndex + 2) % colors.length;
+  const nextBacIndex = (currentIndex + 1) % colors.length;
+  
+  
+  
+  
 
   // 5. Apply the new color
   document.documentElement.style.setProperty('--secondary-color', colors[nextIndex]);
-  
+  document.documentElement.style.setProperty('--primary-color', colors[nextBacIndex]);
   
   
 
