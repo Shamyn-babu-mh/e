@@ -5,6 +5,7 @@
 
 * {margin:0;
 font-family:lekton;
+  
 }
 
 :root {
@@ -94,10 +95,10 @@ font-family:lekton;
 border: 1px solid black;}
 
 #car1 {display:none;
-  background:white;
+  background:var(--primary-color);
   z-index:10;
   border-radius:12px;
-  
+ 
   position: absolute; /* Changed from relative to absolute for precise coordinate physics tracking */
   left:400px;
   width: 44px;
@@ -107,7 +108,8 @@ border:1px solid black;
 }
 
 #car2 {display:none;
-  background:white;
+ 
+  background:var(--primary-color);
   z-index:10;
   border-radius:12px;
   border-top:13px solid red;
@@ -167,11 +169,11 @@ z-index:14;}
 
 #donation-timer {display:none;
   padding-left:4vw;
- padding-right: 30vw;                
+  padding-right: 30vw;
 z-index:201;
   position:fixed;
   background:#f3f6fc;
-  width:100vw;
+  width:70vw;
   height:100vh;
   
   
@@ -217,7 +219,7 @@ position:fixed;
   bottom:3vh;
 background:blue;
 color:white;
-padding:5vw;
+padding:10px;
 border-radius:10vw;
 
   cursor: pointer;
@@ -326,7 +328,7 @@ background:var(--primary-color);}
 #carBody {border-radius: 12px;
   z-index:3;
   
-  background: white;
+  background: var(--primary-color);
   position: absolute;
  border:1px solid black;
   border-top:13px solid color-mix(in srgb, var(--secondary-color) 70%, transparent);
