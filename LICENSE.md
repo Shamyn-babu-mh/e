@@ -1,1 +1,1 @@
-cc0 license
+do whatever.
