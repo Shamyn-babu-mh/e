@@ -33,7 +33,7 @@ if (!systemEndDate) {
   endDate = new Date();
   
   // Add 0 days (Change to + 4 for a 4-day wait/trial)
-  endDate.setDate(endDate.getDate() + 6);
+  endDate.setDate(endDate.getDate() + 3);
 
   formattedEndDate = endDate.toISOString().split('T')[0];
 
@@ -55,7 +55,7 @@ function showAlert() {
     endDate = new Date();
   
   // Add 0 days (Change to + 4 for a 4-day wait/trial)
-  endDate.setDate(endDate.getDate() + 34);
+  endDate.setDate(endDate.getDate() + 3);
 
   formattedEndDate = endDate.toISOString().split('T')[0];
 
