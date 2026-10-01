@@ -33,7 +33,7 @@ if (!systemEndDate) {
   endDate = new Date();
   
   // Add 0 days (Change to + 4 for a 4-day wait/trial)
-  endDate.setDate(endDate.getDate() + 3);
+  endDate.setDate(endDate.getDate() + 2);
 
   formattedEndDate = endDate.toISOString().split('T')[0];
 
@@ -55,7 +55,7 @@ function showAlert() {
     endDate = new Date();
   
   // Add 0 days (Change to + 4 for a 4-day wait/trial)
-  endDate.setDate(endDate.getDate() + 3);
+  endDate.setDate(endDate.getDate() + 2);
 
   formattedEndDate = endDate.toISOString().split('T')[0];
 
@@ -73,7 +73,7 @@ function showAlert() {
 
 function changeColor() {
   // 1. Define your color sequence in order
-  const colors = ["blue", "#f3f6fc", "crimson", "#f3f6fc", "#6D28D9", "#D7FF00", "#C2185B", "#e0f2fe"];
+  const colors = ["blue", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "crimson", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "#C4A484", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "#C2185B", "color-mix(in srgb, var(--secondary-color) 10%, transparent)"];
   
   // 2. Get the current active color from CSS variables
   const currentColor = getComputedStyle(document.documentElement)
@@ -383,9 +383,13 @@ if (window.innerWidth > 490) {
   deceleration: 0.15,
   friction: 0.0,
   angle: -90,                   // Heading upwards alignment
-  wheelbase: 60,
+ wheelbase: window.innerHeight * 0.1,
 };
 }
+
+
+
+
 
 
 // State Machines: 'stop', 'forward', or 'reverse'
@@ -456,7 +460,14 @@ window.addEventListener('keydown', (e) => {
   const key = e.key.toLowerCase();
   if (key === 'arrowup' || key === 'w') { currentDriveMode = 'forward'; updateControlUI(); }
   if (key === 'arrowdown' || key === 's') { currentDriveMode = 'reverse'; updateControlUI(); }
-  if (key === 'a') { currentDriveMode = 'stop'; updateControlUI(); e.preventDefault(); }
+  if (key === 'q'|| key === ' ') { currentDriveMode = 'stop'; updateControlUI(); e.preventDefault(); }
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -470,6 +481,7 @@ window.addEventListener('keydown', (e) => {
     'x': 2, // Gear 2
     'c': 3, // Gear 3
     'v': 4  // Gear 4
+    
   };
 
   // Check if the pressed key is within our map configuration
@@ -607,3 +619,56 @@ function simulateVehicleLoop() {
 
 // Fire Simulation Engine Run
 requestAnimationFrame(simulateVehicleLoop);
+
+
+
+
+
+
+/* ==========================================================================
+   KEYBOARD CONTROLS FOR BOTH DIRECTIONS
+   ========================================================================== */
+
+// Shared helper function to update visual angles for the wheel and front tires
+function updateSteeringVisuals(targetRotation) {
+  steeringWheel.style.transform = `rotate(${targetRotation}deg)`;
+  
+  // Scale tire profile rotation down appropriately (360deg wheel turns tires 30deg)
+  const tyreRotation = targetRotation / 12;
+  tyreLeft.style.transform = `rotate(${tyreRotation}deg)`;
+  tyreRight.style.transform = `rotate(${tyreRotation}deg)`;
+}
+
+// Listen for global keyboard strokes
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowLeft'|| e.key === 'a') {
+    e.preventDefault(); // Prevents the browser page from scrolling left
+    
+    // Move steering left by subtracting 36 degrees
+    let targetRotation = currentRotation - 36;
+    
+    // Rigidly enforce maximum steering boundary constraints (-360 degrees)
+    if (targetRotation < -MAX_STEER_LIMIT) {
+      targetRotation = -MAX_STEER_LIMIT;
+    }
+    
+    currentRotation = targetRotation;
+    updateSteeringVisuals(currentRotation);
+  } 
+  
+  else if (e.key === 'ArrowRight'|| e.key === 'd') {
+    e.preventDefault(); // Prevents the browser page from scrolling right
+    
+    // Move steering right by adding 36 degrees
+    let targetRotation = currentRotation + 36;
+    
+    // Rigidly enforce maximum steering boundary constraints (+360 degrees)
+    if (targetRotation > MAX_STEER_LIMIT) {
+      targetRotation = MAX_STEER_LIMIT;
+    }
+    
+    currentRotation = targetRotation;
+    updateSteeringVisuals(currentRotation);
+  }
+});
+
