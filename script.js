@@ -73,7 +73,7 @@ function showAlert() {
 
 function changeColor() {
   // 1. Define your color sequence in order
-  const colors = ["blue", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "crimson", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "#C4A484", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "#C2185B", "color-mix(in srgb, var(--secondary-color) 10%, transparent)"];
+  const colors = ["blue", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "crimson", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "#C4A484", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "#C2185B", "color-mix(in srgb, var(--secondary-color) 10%, transparent)", "green", "color-mix(in srgb, var(--secondary-color) 10%, transparent)"];
   
   // 2. Get the current active color from CSS variables
   const currentColor = getComputedStyle(document.documentElement)
