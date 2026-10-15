@@ -92,7 +92,10 @@ font-family:lekton;
 }
 
 #line {display:none;
-border: 1px solid black;}
+  border:1px solid black;
+  position:fixed;
+  top:1px;
+}
 
 #car1 {display:none;
   background:var(--secondary-color);
@@ -155,8 +158,16 @@ text-decoration:none;
 
 #menu {position:fixed;
   right:0;
+  cursor: pointer;
+  font-size:13px;
+  background:white;
+  padding:2px 6px 1px 9px;
+
   top:123px;
 z-index:14;}
+
+#menu:hover {box-shadow: 4px 4px 10px 2px var(--secondary-color);
+}
 
 #sceneH {position:fixed;
   right:0;
@@ -703,10 +714,3 @@ height:4vw;}
 
   
 }
-
-
-
-
-
-
-
