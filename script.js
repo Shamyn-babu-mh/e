@@ -674,21 +674,3 @@ window.addEventListener('keydown', function(e) {
 
 
 
-
-const currentUrl = window.location.href;
-
-if (currentUrl.includes("#reverse-parking-game")) {
-    document.getElementById("menu")?.click();
-
-    const schemaScript = document.querySelector(
-        'script[type="application/ld+json"]'
-    );
-
-    if (schemaScript) {
-        const schema = JSON.parse(schemaScript.textContent);
-
-        schema.screenshot =  "https://raw.githubusercontent.com/Shamyn-babu-mh/e/refs/heads/main/IMG_20260724_190554.jpg";
-
-        schemaScript.textContent = JSON.stringify(schema);
-    }
-}
