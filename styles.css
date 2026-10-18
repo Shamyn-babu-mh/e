@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
 
 a {text-decoration:none;}
@@ -118,7 +117,7 @@ font-family:lekton;
  width: 7vh;
   height:10vh;
   background: white;
-  top:130px;
+  top:30vh;
 
 }
 
@@ -143,7 +142,7 @@ font-family:lekton;
  width: 7vh;
   height:10vh;
   background: white;
-  top:320px;
+  top:62vh;
 
 }
 
@@ -680,7 +679,7 @@ height:4vw;}
        width: 10vw;
   height: 16vw;
       left:30vw;
-      top:15vw;
+      top:10vh;
 }
   
    #car2 {border-radius: 6px;
