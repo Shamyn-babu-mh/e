@@ -62,7 +62,7 @@
     <body>
 
 
-      
+
       
        <div id="privacyPolicy"><p>Last updated: <time datetime="2026-07-28">July 28, 2026</time></p>
          <br>
@@ -73,7 +73,7 @@
 <div id="myContainer"> </div>
 <div id="myContainer1"></div>
 
-<p id="instructions">to move the car forward, click on the steering wheel</p>
+<p id="instructions">to move the car forward, click on the steering wheel or the forward button</p>
      
       
         <div id="car1"></div>
@@ -209,8 +209,9 @@
 <!-- One-Touch Driving Controls Overlay -->
 <div id="driveControls">
   
-  <button id="btnStop" class="drive-btn stop-btn">🛑 STOP</button>
-  <button id="btnReverse" class="drive-btn">▼ REVERSE</button>
+
+  <button id="btnStop" class="drive-btn stop-btn quantum">🛑 STOP</button>
+  <button id="btnReverse" class="drive-btn quantum">▼ REVERSE</button>
 </div>
 
 
@@ -263,7 +264,8 @@
       
       
 
-<button id="btnForward" class="drive-btn" onclick="instructionsDis()">
+<button id="btnForward" onclick="instructionsDis()">
+
   <svg
    width="141.6324mm"
    height="142.06676mm"
@@ -284,7 +286,11 @@
        cx="72.29332"
        cy="72.056686"
        r="15.909609" /></g></svg>
+ 
+  
+  <div id="hi">▲ FORWARD</div>
 
+  
 </button>
 
       
