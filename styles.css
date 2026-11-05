@@ -336,7 +336,7 @@ background:var(--primary-color);}
 #hi {z-index:4;
   
   max-width: 140px;
-  height: 16vw;
+  height: 11vh;
    background-color: var(--primary-color);
  border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
  
@@ -356,7 +356,7 @@ background:var(--primary-color);}
   cursor: pointer;
   
   position: absolute;
- bottom:31vh;
+ bottom:32vh;
   left:45vw;
   
 }
@@ -471,8 +471,8 @@ width:6px;
 .drive-btn {z-index:4;
   width: 25vw;
   max-width: 140px;
-  height: 16vw;
-  max-height: 65px;
+  height: 16vh;
+ 
    background-color: var(--primary-color);
  border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
  
@@ -531,8 +531,8 @@ background:color-mix(in srgb, var(--secondary-color) 100%, transparent);
 
 .drive-btn {z-index:4;
   
-  
-  height: 16vh;
+  height:11vh;
+ 
    background-color: var(--primary-color);
  border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
  
@@ -545,7 +545,7 @@ background:color-mix(in srgb, var(--secondary-color) 100%, transparent);
   width: 28vw;
   max-width: 140px;
   
-  max-height: 60px;
+
 
   font-size: 16px;
   
