@@ -336,7 +336,7 @@ background:var(--primary-color);}
 #hi {z-index:4;
   
   max-width: 140px;
-  height: 11vh;
+  height: 9vh;
    background-color: var(--primary-color);
  border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
  
@@ -349,7 +349,7 @@ background:var(--primary-color);}
   width: 28vw;
   max-width: 140px;
   
-  max-height: 60px;
+  
 
   font-size: 16px;
   
@@ -471,7 +471,7 @@ width:6px;
 .drive-btn {z-index:4;
   width: 25vw;
   max-width: 140px;
-  height: 16vh;
+
  
    background-color: var(--primary-color);
  border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, transparent);
@@ -628,6 +628,8 @@ background:color-mix(in srgb, var(--secondary-color) 100%, transparent);
   width: 40vw;
   height:40vw;
 }
+  .drive-btn {height:9vh;}
+
   
   #donate {
   font-size:16px;
@@ -765,7 +767,7 @@ height:4vw;}
   
   #keyboardControls {display:none;}
   
-  #hi {
+  #hi {bottom:28vh;
   left:46vw;}
 
   
